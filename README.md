@@ -33,9 +33,9 @@ NALU:  y = g * a + (1 − g) * m    m = exp W(log(|x| + epsilon)), g = σ(Gx)
 
 # NALU - Usage
 ### Parameters : 
-mode           : The mode parameter is used to switch the cell between NALU and NAC. The default value is 'NALU'.
-MW_initializer : The MW_initializer parameter is used to initialize the  ```W``` and ```M``` weight matrix. The deafult value is 'glorot_uniform'
-G_initializer  : The G_initializer parameter is used to initialize the  ```G``` weight matrix. The deafult value is 'glorot_uniform'
+mode                    : The mode parameter is used to switch the cell between NALU and NAC. The default value is 'NALU'.
+MW_initializer          : The MW_initializer parameter is used to initialize the  ```W``` and ```M``` weight matrix. The deafult value is 'glorot_uniform'
+G_initializer           : The G_initializer parameter is used to initialize the  ```G``` weight matrix. The deafult value is 'glorot_uniform'
 
 ```
 mode = NALU
