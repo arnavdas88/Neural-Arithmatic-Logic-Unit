@@ -37,8 +37,8 @@ NALU:  y = g * a + (1 − g) * m    m = exp W(log(|x| + epsilon)), g = σ(Gx)
 
 ```
 mode = NALU
-x = Input((100,))
-y = NALU(2, mode=mode, 
+x = Input((2,))
+y = NALU(3, mode=mode, 
             MW_initializer=RandomNormal(stddev=1),
             G_initializer=Constant(10))(x)
 y = NALU(1, mode=mode, 
