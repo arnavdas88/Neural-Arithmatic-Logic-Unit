@@ -4,7 +4,7 @@ from keras.layers import *
 from keras.initializers import *
 from keras.models import *
 
-# NALU
+# NAC_NALU
 class NALU(Layer):
     def __init__(self, units, MW_initializer='glorot_uniform',
                  G_initializer='glorot_uniform', mode="NALU",
