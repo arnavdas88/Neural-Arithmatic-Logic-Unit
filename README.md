@@ -1,5 +1,5 @@
 # NALU-Keras
-A keras implementation of [Neural Arithmetic Logic Units](https://arxiv.org/pdf/1808.00508.pdf) by Andrew et. al.
+This is a Keras implementation of [Neural Arithmetic Logic Units](https://arxiv.org/abs/1808.00508) by *Andrew Trask, Felix Hill, Scott Reed, Jack Rae, Chris Dyer and Phil Blunsom*.
 
 While neural networks can successfully represent and manipulate numerical quantities given an
 appropriate learning signal, the behavior that they learn does not generally exhibit systematic generalization. Specifically, one frequently observes failures when quantities that lie outside the
@@ -17,7 +17,9 @@ single-value neurons, operators that are capable of representing simple function
 used to create each output. However, despite this combinatorial character, they are differentiable,
 making it possible to learn them with backpropagation. 
 
-![NALU](nalu.png)
+<p align="center">
+ <img src="https://github.com/llSourcell/Neural_Arithmetic_Logic_Units/blob/master/imgs/arch.png" alt="Drawing", width=60%>
+</p>
 
 The NALU consists of two NAC cells (the purple cells) interpolated by a learned sigmoidal gate
 g (the orange cell), such that if the add/subtract subcell’s output value is applied with a weight of
@@ -35,6 +37,10 @@ NALU:  y = g * a + (1 − g) * m    m = exp W(log(|x| + epsilon)), g = σ(Gx)
 ### Parameters : 
 <b>mode</b> : The mode parameter is used to switch the cell between NALU and NAC. The default value is 'NALU'<br><b>MW_initializer</b> : The MW_initializer parameter is used to initialize the  ```W``` and ```M``` weight matrix. The deafult value is 'glorot_uniform'<br><b>G_initializer</b> : The G_initializer parameter is used to initialize the  ```G``` weight matrix. The deafult value is 'glorot_uniform'
 
+```
+from NALU import *
+```
+<br><br><br>
 ```
 mode = NALU
 x = Input((2,))
