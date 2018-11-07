@@ -40,7 +40,7 @@ NALU:  y = g * a + (1 − g) * m    m = exp W(log(|x| + epsilon)), g = σ(Gx)
 ```
 from NALU import *
 ```
-<br><br><br>
+
 ```
 mode = NALU
 x = Input((2,))
